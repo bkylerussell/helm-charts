@@ -108,6 +108,9 @@ gitlab:
   {{- with .maximum_requests_per_second }}
   maximum_requests_per_second: {{ . }}
   {{- end }}
+  {{- with .time_window }}
+  time_window: {{ . }}
+  {{- end }}
 
 {{- end }}
 {{- with .Values.config.pull }}
