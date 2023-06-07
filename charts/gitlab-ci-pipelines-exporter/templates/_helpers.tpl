@@ -91,12 +91,28 @@ server:
   {{- with .metrics }}
   metrics: {{ toYaml . | nindent 4 }}
   {{- end }}
-  {{- with .webhook.enabled }}
+  {{- with .webhook }}
   webhook:
+    {{- with .enabled }}
     enabled: true
-  {{- end }}
+    {{- end }}
+    {{- with .add_webhooks }}
+    add_webhooks: {{ toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .webhook_url }}
+    webhook_url: {{ . }}
+    {{- end }}
+  {{- end}}
 
 {{- end }}
+
+{{- with .Values.config.config_update }}
+config_update:
+  {{- with .update_config }}
+  update_config: {{ toYaml . | nindent 6 }}
+  {{- end }}
+{{- end }}
+
 {{- with .Values.config.gitlab }}
 gitlab:
   url: {{ default "https://gitlab.com" .url }}
@@ -107,9 +123,6 @@ gitlab:
   enable_tls_verify: {{ .enable_tls_verify }}
   {{- with .maximum_requests_per_second }}
   maximum_requests_per_second: {{ . }}
-  {{- end }}
-  {{- with .time_window }}
-  time_window: {{ . }}
   {{- end }}
 
 {{- end }}
