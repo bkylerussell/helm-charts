@@ -97,7 +97,7 @@ server:
     enabled: true
     {{- end }}
     {{- with .add_webhooks }}
-    add_webhooks: {{ toYaml . | nindent 2 }}
+    add_webhooks: {{ toYaml . | nindent 6 }}
     {{- end }}
     {{- with .webhook_url }}
     webhook_url: {{ . }}
@@ -109,7 +109,7 @@ server:
 {{- with .Values.config.config_update }}
 config_update:
   {{- with .update_config }}
-  update_config: {{ toYaml . | nindent 2 }}
+  update_config: {{ toYaml . | nindent 6 }}
   {{- end }}
 {{- end }}
 
