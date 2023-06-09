@@ -102,6 +102,9 @@ server:
     {{- with .webhook_url }}
     webhook_url: {{ . }}
     {{- end }}
+    {{- with .remove_webhooks}}
+    remove_webhooks: true
+    {{- end }}
   {{- end}}
 
 {{- end }}
