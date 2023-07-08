@@ -1,0 +1,104 @@
+apiVersion: v1
+entries:
+  approuvez:
+  - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2023-07-08T14:17:42.179508839Z"
+    description: CLI helper to obtain live confirmation from people over Slack
+    digest: 6aa37d721de768acb29175e1f728ce017c8b517a210359e6be139b5c3b7b2c84
+    home: https://github.com/mvisonneau/approuvez
+    maintainers:
+    - email: maxime.visonneau@gmail.com
+      name: mvisonneau
+    name: approuvez
+    sources:
+    - https://github.com/mvisonneau/helm-charts/tree/main/charts/approuvez
+    urls:
+    - https://github.com/bkylerussell/helm-charts/releases/download/approuvez-0.0.5/approuvez-0.0.5.tgz
+    version: 0.0.5
+  generic-app:
+  - apiVersion: v2
+    appVersion: 0.0.0
+    created: "2023-07-08T14:17:42.368861647Z"
+    description: Generic Application Chart
+    digest: 0f13f3de712994105ac4cee7c1ac790faab38860a606ca90f7466e0c49d75684
+    home: https://github.com/mvisonneau/helm-charts
+    maintainers:
+    - email: maxime.visonneau@gmail.com
+      name: mvisonneau
+    name: generic-app
+    sources:
+    - https://github.com/mvisonneau/helm-charts/tree/main/charts/generic-app
+    urls:
+    - https://github.com/bkylerussell/helm-charts/releases/download/generic-app-0.0.15/generic-app-0.0.15.tgz
+    version: 0.0.15
+  gitlab-ci-pipelines-exporter:
+  - apiVersion: v2
+    appVersion: v0.5.4
+    created: "2023-07-08T14:17:42.524052208Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.13.2
+    description: Prometheus / OpenMetrics exporter for GitLab CI pipelines insights
+    digest: 4b514886ea611feb0c840f5a597eaab8b4ccf6e854a7eb427a9d5d5ccaac595f
+    home: https://github.com/mvisonneau/gitlab-ci-pipelines-exporter
+    maintainers:
+    - email: maxime.visonneau@gmail.com
+      name: mvisonneau
+    name: gitlab-ci-pipelines-exporter
+    sources:
+    - https://github.com/mvisonneau/helm-charts/tree/main/charts/gitlab-ci-pipelines-exporter
+    urls:
+    - https://github.com/bkylerussell/helm-charts/releases/download/gitlab-ci-pipelines-exporter-0.2.19/gitlab-ci-pipelines-exporter-0.2.19.tgz
+    version: 0.2.19
+  slack-git-compare:
+  - apiVersion: v2
+    appVersion: v0.1.0
+    created: "2023-07-08T14:17:42.668773226Z"
+    description: Compare git references within Slack
+    digest: 4af45b3125a645ea2444d7a6f59427240c82a5ad557d5970abbc690422e398c4
+    home: https://github.com/mvisonneau/slack-git-compare
+    maintainers:
+    - email: maxime.visonneau@gmail.com
+      name: mvisonneau
+    name: slack-git-compare
+    sources:
+    - https://github.com/mvisonneau/helm-charts/tree/main/charts/slack-git-compare
+    urls:
+    - https://github.com/bkylerussell/helm-charts/releases/download/slack-git-compare-0.0.8/slack-git-compare-0.0.8.tgz
+    version: 0.0.8
+  tailscale-relay:
+  - apiVersion: v2
+    appVersion: v1.36.1
+    created: "2023-07-08T14:17:42.819527769Z"
+    description: Deploy a tailscale relay on top of kubernetes
+    digest: f44ccc768024de46f0f859bfb0ff05ac79ea90f73a691883aa41dbd4153eef5f
+    home: https://github.com/mvisonneau/tailscale-relay-over-k8s
+    maintainers:
+    - email: maxime.visonneau@gmail.com
+      name: mvisonneau
+    name: tailscale-relay
+    sources:
+    - https://github.com/mvisonneau/helm-charts/tree/main/charts/tailscale-relay-over-k8s
+    urls:
+    - https://github.com/bkylerussell/helm-charts/releases/download/tailscale-relay-0.2.1/tailscale-relay-0.2.1.tgz
+    version: 0.2.1
+  unpoller:
+  - apiVersion: v2
+    appVersion: 2.1.3
+    created: "2023-07-08T14:17:42.969413508Z"
+    description: Deploy UniFi Poller
+    digest: 34c46e27644621885381552ef3754fa3ed0a708e8813f1be179c92aaea1c6360
+    home: https://unpoller.com
+    maintainers:
+    - email: maxime.visonneau@gmail.com
+      name: mvisonneau
+    name: unpoller
+    sources:
+    - https://unpoller.com
+    urls:
+    - https://github.com/bkylerussell/helm-charts/releases/download/unpoller-0.0.1/unpoller-0.0.1.tgz
+    version: 0.0.1
+generated: "2023-07-08T14:17:41.936425802Z"
